@@ -1,0 +1,348 @@
+/* Main layout */
+.home {
+  min-height: 100vh;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 40px;
+}
+
+/* Header */
+.home-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 48px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-icon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 13px;
+  background: var(--accent-light);
+  color: var(--accent);
+  font-size: 21px;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: 23px;
+  font-weight: 700;
+  letter-spacing: -0.8px;
+}
+
+.signout-button {
+  padding: 10px 17px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.signout-button:hover {
+  background: var(--surface-hover);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* Welcome section */
+.welcome-section {
+  margin-bottom: 35px;
+}
+
+.welcome-section h2 {
+  margin: 0 0 8px;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.welcome-section p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 15px;
+}
+
+/* User profile */
+.profile-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 20px;
+  margin-bottom: 30px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+}
+
+.profile-avatar {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--accent-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+
+.profile-details {
+  min-width: 0;
+}
+
+.profile-details p {
+  margin: 3px 0;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.profile-name {
+  color: var(--text) !important;
+  font-size: 14px !important;
+  font-weight: 600;
+}
+
+.profile-uid {
+  overflow-wrap: anywhere;
+  font-size: 11px !important;
+}
+
+/* Gmail section */
+.gmail-section {
+  padding: 28px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+
+.gmail-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 25px;
+}
+
+.gmail-title {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.gmail-title h2 {
+  margin: 0;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.gmail-title p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+.connection-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 12px;
+  border-radius: 20px;
+  background: var(--success-bg);
+  color: var(--success);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+/* Buttons */
+.primary-button {
+  padding: 11px 19px;
+  border: none;
+  border-radius: 10px;
+  background: var(--accent);
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.primary-button:hover:not(:disabled) {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+}
+
+.primary-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Connect Gmail empty state */
+.connect-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 45px 20px;
+}
+
+.connect-icon {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  border-radius: 18px;
+  background: var(--accent-light);
+  color: var(--accent);
+  font-size: 28px;
+}
+
+.connect-state h3 {
+  margin: 0 0 8px;
+  font-size: 17px;
+}
+
+.connect-state p {
+  max-width: 360px;
+  margin: 0 0 22px;
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* Email list */
+.email-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.email-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 17px 18px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+  transition: all 0.2s ease;
+}
+
+.email-card:hover {
+  background: var(--surface-hover);
+  border-color: #EBC5A7;
+  transform: translateY(-1px);
+}
+
+.email-card h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.email-card p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+
+/* Email list heading */
+.email-list-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 28px 0 14px;
+}
+
+.email-list-heading h3 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.email-count {
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+
+/* Messages */
+.error-message {
+  margin-top: 18px;
+  padding: 12px 15px;
+  border-radius: 9px;
+  background: var(--error-bg);
+  color: var(--error);
+  font-size: 13px;
+}
+
+.loading-message,
+.empty-message {
+  padding: 30px 15px;
+  color: var(--text-secondary);
+  font-size: 13px;
+  text-align: center;
+}
+
+/* Responsive layout */
+@media (max-width: 650px) {
+  .home {
+    padding: 28px 18px;
+  }
+
+  .home-header {
+    margin-bottom: 35px;
+  }
+
+  .welcome-section h2 {
+    font-size: 25px;
+  }
+
+  .gmail-section {
+    padding: 20px 16px;
+  }
+
+  .gmail-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .profile-card {
+    padding: 16px;
+  }
+
+  .connect-state {
+    padding: 35px 12px;
+  }
+}

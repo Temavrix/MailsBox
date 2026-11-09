@@ -4,7 +4,7 @@ import {
   signInWithPopup,
 } from "firebase/auth";
 import type { User } from "firebase/auth";
-
+import Mailbox from "./assets/MailBox.png";
 import { auth, googleProvider } from "./firebaseClient";
 import { saveUserData } from "./userService";
 import Home from "./Home";
@@ -56,15 +56,19 @@ function App() {
   }
 
   return (
-    <section className="card">
-      <h1>Log in to Nuvin</h1>
-
-      <button className="button" onClick={handleGoogleLogin}>
-        Continue with Google
-      </button>
-
-      {error && <p>{error}</p>}
-    </section>
+    <>
+      <section>
+        <div className="card linear-direction">
+          <img src={Mailbox} alt="PatchFlow" width="40" height="40" />
+          <h1>Log in to MailBox</h1><br/>
+          <button className="button" onClick={handleGoogleLogin}>
+            Continue with Google
+          </button>
+          {error && <p>{error}</p>}<br/>
+          Don't have an account? <a onClick={handleGoogleLogin}>Sign up</a>
+        </div>
+      </section>
+    </>
   );
 }
 
